@@ -1,0 +1,102 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    
+
+    <!-- Sidebar -->
+    <div class="sidebar company-dashboard-sidebar" id="sidebar-company-dashboard">
+        <div class="mt-5">
+        <a href="#add-product"><i class="fa fa-plus"></i><span class="text">Add Product</span></a>
+        <a href="#manage-sales"><i class="fa fa-line-chart"></i><span class="text">Sales & Income</span></a>
+        <a href="#manage-reviews"><i class="fa fa-comments"></i><span class="text">Manage Reviews</span></a>
+        <a href="#page-views"><i class="fa fa-eye"></i><span class="text">Page Views</span></a>
+        <a href="#categories"><i class="fa fa-tags"></i><span class="text">Product Categories</span></a>
+        <a href="#settings"><i class="fa fa-cog"></i><span class="text">Settings</span></a>
+        </div>
+    
+        <!-- Hamburger icon toggle -->
+        <button id="toggle-btn" class="btn">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    
+
+    <!-- Content -->
+    <div class="company-dashboard-sidebar-content" style="margin-bottom: 500px;">
+        <h1>Welcome to Your Company Dashboard</h1>
+
+        <!-- Add Product Section -->
+        <section id="add-product">
+            <h2>Add Product</h2>
+            <form>
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" class="form-control" id="product-name" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Description</label>
+                    <textarea class="form-control" id="product-description" rows="3" placeholder="Enter product description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price</label>
+                    <input type="number" class="form-control" id="product-price" placeholder="Enter price">
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Upload Image</label>
+                    <input type="file" class="form-control-file" id="product-image">
+                </div>
+                <div class="form-group">
+                    <label for="product-video">Upload Video</label>
+                    <input type="file" class="form-control-file" id="product-video">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </section>
+
+        <!-- Manage Sales Section -->
+        <section id="manage-sales" class="mt-5">
+            <h2>Manage Sales & Income</h2>
+            <p>View and control your sales and income statistics.</p>
+        </section>
+
+        <!-- Manage Reviews Section -->
+        <section id="manage-reviews" class="mt-5">
+            <h2>Manage Reviews</h2>
+            <p>View reviews for your products, respond to customers, and remove inappropriate reviews.</p>
+        </section>
+
+        <!-- Page Views Section -->
+        <section id="page-views" class="mt-5">
+            <h2>Page Views</h2>
+            <p>See how many times your company profile has been visited.</p>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section id="categories" class="mt-5">
+            <h2>Product Categories</h2>
+            <form>
+                <div class="form-group">
+                    <label for="product-category">Select Category</label>
+                    <select class="form-control" id="product-category">
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Home & Kitchen</option>
+                        <option>Beauty</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Category</button>
+            </form>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="mt-5">
+            <h2>Settings</h2>
+            <p>Configure your company preferences and account details.</p>
+        </section>
+    </div>
+
+   
+{% endblock content %}

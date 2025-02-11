@@ -1,0 +1,251 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+
+    #album{
+        width: 1050px;
+        height: 700px;
+        margin: 5% auto;
+    }
+    @media screen and (max-width: 768px) {
+
+        #album {
+            width: 100%;  
+            height: 300px;         
+        }
+
+        .cataloge-pages-cataloge-page img  {
+            width: 100%;  
+            height: 300px;
+            background-size: cover;
+        }
+
+        .cataloge-pages-cataloge-page .overlay {
+            max-height: 300px !important;
+        }
+
+        .cataloge-pages-cataloge-page .btn-see-more {
+            font-size: 16px; 
+            padding: 8px 15px;
+        }
+    }
+    .cataloge-pages-cataloge-page {
+        position: relative;
+        width: 100%;
+        /* background-size: cover; */
+        background-position: center;
+    }
+
+    .cataloge-pages-cataloge-page .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .cataloge-pages-cataloge-page:hover .overlay {
+        opacity: 1;
+    }
+
+
+
+
+    .cataloge-pages-cataloge-page .btn-see-more {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 20px;
+        background-color: rgba(0, 123, 255, 0.8); 
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+
+
+    .subscribe-button{
+
+        background: transparent;
+        color: rgb(255, 255, 255);
+    }
+    .subscribe-button:hover{
+
+        background: transparent;
+        color: black;
+    }
+    .subscrribe-title ,  .footer-top-title{
+        font-weight: bold;
+        color: white;
+    }
+
+</style>
+
+
+<div class="col-lg-12">
+    <div class="row">
+        <article class="col-md-3 filter-group p-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <header class="card-header">
+                <h6 class="title">Catalog Info</h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                    <!-- Views Display with Icon -->
+                    <p><i class="fa fa-eye ml-2 p-1"></i> <strong>Catalog Views:</strong> <span id="catalogViews">1234</span></p>
+                    <p><i class="fa fa-calendar ml-2 p-1"></i> <strong>Publish Date:</strong> January 1, 2025</p>
+                    <p><i class="fa fa-user ml-2 p-1"></i> <strong>Creator:</strong> Company XYZ</p>
+                    <p><i class="fa fa-language ml-2 p-1"></i> <strong>Language:</strong> English</p>
+                    <p><i class="fa fa-download ml-2 p-1"></i> <strong>Download Count:</strong> 250</p>
+                    <p><i class="fa fa-file-text ml-2 p-1"></i> <strong>Pages:</strong> <span id="catalogPages">50</span></p>
+                    <p><i class="fa fa-building ml-2 p-1"></i> <strong>Companies:</strong> <span id="catalogCompanies">25</span></p>
+
+                    <!-- Download Button with Icon -->
+                    <a href="/path-to-catalog-download.pdf" class="btn" style="font-weight: bold; font-size: 20px;" download="catalog.pdf">
+                        <i class="fa fa-download"></i> Download as PDF
+                    </a>
+                </div>
+            </div>
+        </article>
+        
+        <div class="col-lg-9">
+            <div id="album">
+                <!-- Image Container with Hover Effect -->
+                <!-- <div class="cataloge-pages-cataloge-page" style="background: url('/static/assets/images/cat4.jpg') no-repeat center center; background-size: contain;">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div> -->
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                <div class="cataloge-pages-cataloge-page" >
+                    <img src="{% static 'assets/images/cat4.jpg' %}" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-md btn-custom animate__animated animate__bounceIn animate__delay-.5s">View Page Details</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3">
+                <h5 class="mb-4 footer-top-title">About Us</h5>
+                <p>We are dedicated to providing the best services and creating memorable experiences. Stay connected and discover more about our journey.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3">
+                <h5 class="mb-4 footer-top-title">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-md-3">
+                <h5 class="mb-4 footer-top-title">Our Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Web Development</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Graphic Design</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Marketing</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">SEO Optimization</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media and Subscribe -->
+            <div class="col-md-3 text-center">
+                <h5 class="mb-4 footer-top-title">Follow Us</h5>
+                <div class="mb-3">
+                    <a href="#" class="text-white mx-2"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa fa-linkedin fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa fa-youtube fa-2x"></i></a>
+                </div>
+                <h5 class="mt-4 subscrribe-title">Subscribe to Our Newsletter</h5>
+                <form class="d-flex mt-2">
+                    <div class="input-group" style="border:none; border-bottom: 2px solid white;">
+                        <input type="email" class="form-control" placeholder="Enter your email" style="background: transparent; border: none;">
+                        <button type="submit" class="btn subscribe-button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="bg-white">
+        <div class="row text-center">
+            <div class="col">
+                <p class="mb-0">&copy; 2025 Your Company. All Rights Reserved.</p>
+                <p class="mb-0"><a href="#" class="text-white text-decoration-none">Privacy Policy</a> | <a href="#" class="text-white text-decoration-none">Terms of Service</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="{% static 'assets/js/turn.js' %}"></script>
+
+
+
+
+<script>
+    $('#album').turn({
+        gradients: true,
+        acceleration: true
+    });
+</script>
+{% endblock content %}
